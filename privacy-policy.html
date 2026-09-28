@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veyora — Privacy Policy</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --text: #1c1e21;
+    --text-muted: #5a6068;
+    --heading: #14161a;
+    --accent: #4a6cf7;
+    --accent-soft: #eef1fe;
+    --border: #e4e6eb;
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --code-bg: #f1f2f5;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --surface: #1c1f24;
+      --text: #e6e8eb;
+      --text-muted: #a2a8b0;
+      --heading: #f4f5f7;
+      --accent: #7c95ff;
+      --accent-soft: #232748;
+      --border: #2d3138;
+      --nav-bg: rgba(20, 22, 26, 0.92);
+      --code-bg: #24272d;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    line-height: 1.65;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--nav-bg);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .brand { font-weight: 700; font-size: 1.05rem; color: var(--heading); letter-spacing: 0.2px; }
+
+  .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 7px 14px;
+    border-radius: 8px;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .nav-links a:hover { background: var(--accent-soft); color: var(--accent); }
+  .nav-links a.active { background: var(--accent-soft); color: var(--accent); }
+
+  .wrap { max-width: 800px; margin: 0 auto; padding: 32px 20px 80px; }
+
+  header.page-header {
+    padding: 28px 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    margin-bottom: 32px;
+  }
+
+  header.page-header h1 { margin: 0 0 6px; font-size: 1.7rem; color: var(--heading); }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin-top: 14px;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
+
+  .meta-row strong { color: var(--text); }
+
+  .badge {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-top: 10px;
+  }
+
+  section.doc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 8px 28px 28px;
+    margin-bottom: 28px;
+  }
+
+  h3 { font-size: 1.08rem; color: var(--heading); margin: 28px 0 8px; scroll-margin-top: 80px; }
+  h3:first-of-type { margin-top: 22px; }
+
+  p { color: var(--text); margin: 10px 0; }
+  ul { margin: 10px 0; padding-left: 22px; }
+  li { margin: 6px 0; }
+
+  a.inline-link { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+  a.inline-link:hover { border-bottom-color: var(--accent); }
+
+  code.pkg { background: var(--code-bg); padding: 2px 6px; border-radius: 5px; font-size: 0.88em; }
+
+  .cross-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    padding: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .cross-link span { color: var(--accent); }
+  .cross-link:hover { border-color: var(--accent); }
+
+  footer.site-footer {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 24px 20px 10px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    border-top: 1px solid var(--border);
+  }
+
+  footer.site-footer p { margin: 4px 0; color: var(--text-muted); }
+  footer.site-footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 480px) {
+    header.page-header h1 { font-size: 1.4rem; }
+    section.doc { padding: 4px 18px 18px; }
+    .nav-inner { justify-content: center; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="nav-inner">
+    <div class="brand">Veyora</div>
+    <div class="nav-links">
+      <a href="veyora-privacy-policy.html" class="active">Privacy Policy</a>
+      <a href="veyora-terms-and-conditions.html">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="page-header">
+    <h1>Veyora — Privacy Policy</h1>
+    <div class="meta-row">
+      <span><strong>App:</strong> Veyora</span>
+      <span><strong>Package:</strong> <code class="pkg">com.rhstudio.veyora</code></span>
+      <span><strong>Developer:</strong> RH Studio PK</span>
+      <span><strong>Country:</strong> Pakistan</span>
+    </div>
+    <div class="badge">Last Updated: September 28, 2026</div>
+  </header>
+
+  <section class="doc">
+
+    <h3>1. Introduction</h3>
+    <p>
+      This Privacy Policy explains how RH Studio PK ("we," "us," or "our") handles information in connection with the
+      Veyora Android application (the "App"), package name <code class="pkg">com.rhstudio.veyora</code>. Veyora is a
+      simple notes app that lets you create, edit, and delete text notes directly on your device. By installing or
+      using the App, you agree to the practices described in this Privacy Policy.
+    </p>
+
+    <h3>2. Information We Do Not Collect</h3>
+    <p>We designed Veyora to be as private as possible. The App does not require an account or registration, and we do not collect:</p>
+    <ul>
+      <li>Your notes or their content — notes are stored only locally on your device</li>
+      <li>Your name, email address, or any account or profile information</li>
+      <li>Your contacts</li>
+      <li>Your precise or approximate location</li>
+      <li>Camera or microphone data</li>
+      <li>Any form of usage analytics or behavioral tracking operated by us</li>
+    </ul>
+    <p>
+      Because notes never leave your device and are not uploaded to any server, we have no ability to view, access,
+      recover, or restore the notes you create in the App.
+    </p>
+
+    <h3>3. Information Collected by Third-Party Services (Google AdMob)</h3>
+    <p>
+      Veyora shows optional rewarded video ads through Google AdMob. After every few notes, the App may ask if you'd
+      like to watch a short video ad to support the App — watching is entirely optional and never required to use
+      the App's core features.
+    </p>
+    <p>To serve and measure these ads, Google AdMob may collect and process information such as:</p>
+    <ul>
+      <li>Advertising ID</li>
+      <li>IP address</li>
+      <li>Device and app information (e.g., device model, operating system version, app version)</li>
+      <li>Ad interaction data (e.g., impressions, clicks, and completed views)</li>
+    </ul>
+    <p>
+      This data is collected and handled by Google in accordance with Google's own privacy policy, which you can
+      review at
+      <a class="inline-link" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/ads</a>.
+      We do not control how Google processes this data and encourage you to review Google's policy for full details.
+    </p>
+    <p>
+      You can reset your advertising ID or opt out of personalized (interest-based) ads at any time from your
+      device's settings (typically under Settings → Privacy/Ads or Google Settings → Ads).
+    </p>
+
+    <h3>4. App Permissions</h3>
+    <p>
+      Veyora requests only two permissions: <strong>INTERNET</strong> and <strong>ACCESS_NETWORK_STATE</strong>.
+      These permissions are used solely to load and display ads through Google AdMob and to check network
+      connectivity before doing so. They are not used to transmit your notes or personal information.
+    </p>
+
+    <h3>5. How Information Is Used</h3>
+    <p>
+      Any information collected by Google AdMob, as described above, is used only to deliver and measure the
+      performance of the optional rewarded ads shown in the App. We do not use this data for any purpose of our own,
+      and we do not combine it with any other information.
+    </p>
+
+    <h3>6. Data Storage and Security</h3>
+    <p>
+      All notes you create are stored locally on your device's internal storage. They are not backed up to any
+      cloud service or server operated by us. Because your notes remain on your device, you are responsible for the
+      security of your device (for example, using a screen lock) to prevent unauthorized access to your notes.
+    </p>
+
+    <h3>7. Data Sharing</h3>
+    <p>
+      We do not sell your personal data, and we do not share your notes with anyone because we never receive them.
+      The only data shared with a third party is the advertising-related information described in Section 3, which
+      is collected directly by Google AdMob in connection with the optional rewarded ads.
+    </p>
+
+    <h3>8. Children's Privacy</h3>
+    <p>
+      Veyora is not directed to children under the age of 13, and we do not knowingly collect personal information
+      from children. If you believe a child has provided personal information through the App, please contact us so
+      we can address the matter.
+    </p>
+
+    <h3>9. User Choices and Rights</h3>
+    <ul>
+      <li>You may delete any or all of your notes within the App at any time.</li>
+      <li>You may uninstall the App at any time, which will remove all locally stored notes and app data from your device.</li>
+      <li>You may control ad personalization and reset your advertising ID through your device's settings.</li>
+      <li>You may choose not to watch any rewarded video ads offered in the App, as they are entirely optional.</li>
+    </ul>
+
+    <h3>10. Changes to This Privacy Policy</h3>
+    <p>
+      We may update this Privacy Policy from time to time to reflect changes in the App or applicable requirements.
+      Any changes will be reflected by an updated "Last Updated" date at the top of this page. We encourage you to
+      review this page periodically.
+    </p>
+
+    <h3>11. Contact Us</h3>
+    <p>If you have any questions about this Privacy Policy, please contact us:</p>
+    <ul>
+      <li><strong>Developer:</strong> RH Studio PK</li>
+      <li><strong>Email:</strong> <a class="inline-link" href="mailto:riderhunter301@gmail.com">riderhunter301@gmail.com</a></li>
+      <li><strong>Website:</strong> <a class="inline-link" href="https://rhstudio.rf.gd" target="_blank" rel="noopener noreferrer">rhstudio.rf.gd</a></li>
+      <li><strong>Country:</strong> Pakistan</li>
+    </ul>
+  </section>
+
+  <a class="cross-link" href="veyora-terms-and-conditions.html">Looking for the <span>Terms &amp; Conditions</span>? Click here →</a>
+
+</div>
+
+<footer class="site-footer">
+  <p>© 2026 RH Studio PK. All rights reserved.</p>
+  <p>
+    <a href="mailto:riderhunter301@gmail.com">riderhunter301@gmail.com</a>
+    &nbsp;·&nbsp;
+    <a href="https://rhstudio.rf.gd" target="_blank" rel="noopener noreferrer">rhstudio.rf.gd</a>
+  </p>
+</footer>
+
+</body>
+</html>
